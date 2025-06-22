@@ -1,0 +1,15 @@
+﻿@page "/"
+@inject GameService GameService
+@implements IDisposable
+
+@code {
+    protected override void OnInitialized()
+    {
+        GameService.StartGame();
+    }
+
+    public void Dispose()
+    {
+        GameService.Dispose();
+    }
+}
